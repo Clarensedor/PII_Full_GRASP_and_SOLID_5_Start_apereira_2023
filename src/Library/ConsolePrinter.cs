@@ -2,11 +2,14 @@ using System;
 
 namespace Full_GRASP_And_SOLID
 {
+    /// <summary>
+    /// ya no depende de Recipe si no que de IRecipeContent.
+    /// </summary>
     public class ConsolePrinter : IPrinter
     {
-        public void PrintRecipe(Recipe recipe)
+        public void PrintRecipe(IRecipeContent recipeContent)
         {
-            Console.WriteLine(recipe.GetTextToPrint());
+            Console.WriteLine(recipeContent.GetTextToPrint());
         }
     }
 }
